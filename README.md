@@ -44,5 +44,14 @@ python -i emails.csv -o result.csv
 ```
 password,b94e0627-72dc-4833-9207-4dea818eb7fe,bob@gmail.com,bob
 ```
+## Docker Usage
+In case you don't want to install anything on your computer (apart from Docker), you can use the containerized version. 
+It will use the files you deliver as **files/input.csv**. After so, you just have to write:
+```bash
+docker compose 
+... Executing the program ...
+docker compose down
+```
+and **files/output.csv** will appear next to the input.csv if everything went okay.
 ## License
 This project is licensed under the MIT License - see the LICENSE file for details

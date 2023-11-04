@@ -1,0 +1,11 @@
+version: '3.8'
+
+name: 'helios-generator'
+
+services:
+  helios-generator-service:
+    container_name: helios-generator-container
+    image: josesanc02/helios-bulk-generator
+    volumes:
+      - ./files:/app/files
+    command: ["python", "main.py", "-i", "files/input.csv", "-o", "files/output.csv"]
