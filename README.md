@@ -15,7 +15,7 @@ In order to use theis
 pip install -r requirements.txt
 ```
 ## Usage
-Explain how to use your project. Provide code examples and any additional information that may be helpful to users.
+You can use this script by executing main.py.
 
 ```bash
 usage: python main.py [-h] [-i <input_file>] [-o <output_file>] [--disable_warnings]
