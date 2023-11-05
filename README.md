@@ -1,4 +1,4 @@
-# Project Name
+# Helios Voting Bulk Generator
 
 A uuid generator for Helios Bulk generator system.
 
