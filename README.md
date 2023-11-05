@@ -10,7 +10,7 @@ A uuid generator for Helios Bulk generator system.
 
 ## Installation
 
-In order to use theis
+In order to use this
 ```bash
 pip install -r requirements.txt
 ```
