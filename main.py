@@ -41,7 +41,7 @@ def generate_bulk(input_file: str, output_file: str):
         input_file_stat = os.stat(input_file)
         if input_file_stat == 0:
             raise EmptyFileException
-        with open(input_file, 'r') as csv_in, open(output_file, 'w', newline='') as csv_out:
+        with open(input_file, 'r', encoding="utf8") as csv_in, open(output_file, 'w', newline='', encoding="utf8") as csv_out:
             reader = csv.reader(csv_in)
             writer = csv.writer(csv_out)
             row_counter = 0
@@ -69,8 +69,8 @@ def generate_bulk(input_file: str, output_file: str):
     except EmptyFileException:
         logging.error(f"file '{input_file}' is empty")
         exit(1)
-    except:
-        logging.error(f"Unknown error, could not process '{input_file}'")
+    except Exception as e:
+        logging.error(f"Unknown error, could not process '{input_file}' {e}")
         exit(1)
     logging.info(f"CSV generated on file '{output_file}'")
 
